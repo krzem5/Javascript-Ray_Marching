@@ -32,11 +32,11 @@ function mouseMove(e){
 }
 function create_lines(){
 	fetch("./data/board.txt").then((r)=>r.text()).then(function(b){
-		b=b.split("\n")
-		w=b[0].split(" ")[0]
-		h=b[0].split(" ")[1]
-		CW=50
-		CH=50
+		let b=b.split("\n")
+		let w=b[0].split(" ")[0]
+		let h=b[0].split(" ")[1]
+		let CW=50
+		let CH=50
 		cnv.width=CW*w
 		cnv.height=CH*h
 		lines.push(new Line(0,0,cnv.width,0,false))
